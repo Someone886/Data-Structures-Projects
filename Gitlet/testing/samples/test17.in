@@ -1,0 +1,19 @@
+I setup2.inc
++ cat.txt notwug.txt
+> add cat.txt
+<<<
+> commit "added cat.txt"
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<

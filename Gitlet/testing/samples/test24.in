@@ -1,0 +1,75 @@
+> init
+<<<
++ love.txt wug2.txt
+> add love.txt
+<<<
+
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+love.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> commit "addedlove.txt"
+<<<
+> branch like
+<<<
+> status
+=== Branches ===
+*master
+like
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> checkout like
+<<<
+> status
+=== Branches ===
+*like
+master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> rm-branch master
+<<<
+> status
+=== Branches ===
+*like
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+D HEADER "commit [a-f0-9]+"
+D MERGE "Merge: [a-f0-9]+ [a-f0-9]+"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+D HEADER "commit [a-f0-9]+"
+D MERGE "Merge: [a-f0-9]+ [a-f0-9]+"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"

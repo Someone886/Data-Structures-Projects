@@ -1,0 +1,21 @@
+> init
+<<<
++ w.txt wug2.txt
+> add w.txt
+<<<
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+initial commit
+<<<* #THE STAR IS IMPORTANT. make sure you have it if you run log.
+
+D UID1 "${1}"
+
+> find "initial commit"
+${UID1}
+<<<
+

@@ -1,0 +1,111 @@
+ec-test10-remote-fetch-push: ERROR (java gitlet.Main exited with code 2)
+    Error on line 44 of ec-test10-remote-fetch-push.in
+-------------------- ec-test10-remote-fetch-push.in --------------------
+ 1. # Fetch from remote
+ 2. # Set up first repository with one commit + initial
+ 3. C D1
+ 4. I setup2.inc
+ 5. > log
+ 6. ===
+ 7. ${COMMIT_HEAD}
+ 8. Two files
+ 9.
+10. ===
+11. ${COMMIT_HEAD}
+12. initial commit
+13.
+14. <<<*
+15. D R1_TWO "${1}"
+16. D R1_INIT "${2}"
+17.
+18. # Set up second repository with one commit + init.
+19.
+20. C D2
+21. > init
+22. <<<
+23. + k.txt wug2.txt
+24. > add k.txt
+25. <<<
+26. > commit "Add k in repo 2"
+27. <<<
+28. > log
+29. ===
+30. ${COMMIT_HEAD}
+31. Add k in repo 2
+32.
+33. ===
+34. ${COMMIT_HEAD}
+35. initial commit
+36.
+37. <<<*
+38. D R2_K "${1}"
+39. D R2_INIT "${2}"
+40.
+41. # Fetch remote master and reset our master to it.
+42. # Then add another commit and push.
+43. > add-remote R1 ../D1/.gitlet
+44. <<<
+45. > fetch R1 master
+46. <<<
+47. > checkout R1/master
+48. <<<
+49. > log
+50. ===
+51. commit ${R1_TWO}
+52. ${DATE}
+53. Two files
+54.
+55. ===
+56. commit ${R1_INIT}
+57. ${DATE}
+58. initial commit
+59.
+60. <<<*
+61. > checkout master
+62. <<<
+63. > reset ${R1_TWO}
+64. <<<
+65. + h.txt wug3.txt
+66. > add h.txt
+67. <<<
+68. > commit "Add h"
+69. <<<
+70. > log
+71. ===
+72. ${COMMIT_HEAD}
+73. Add h
+74.
+75. ===
+76. commit ${R1_TWO}
+77. ${DATE}
+78. Two files
+79.
+80. ===
+81. commit ${R1_INIT}
+82. ${DATE}
+83. initial commit
+84.
+85. <<<*
+86. D R2_H "${1}"
+87. > push R1 master
+88. <<<
+89.
+90. # Check that we have received the pushed branch
+91. C D1
+92. > log
+93. ===
+94. commit ${R2_H}
+95. ${DATE}
+96. Add h
+97.
+98. ===
+99. commit ${R1_TWO}
+100. ${DATE}
+101. Two files
+102.
+103. ===
+104. commit ${R1_INIT}
+105. ${DATE}
+106. initial commit
+107.
+108. <<<*

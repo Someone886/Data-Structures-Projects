@@ -1,0 +1,15 @@
+> init
+<<<
++ nancy.txt notwug.txt
+> add nancy.txt
+<<<
++ nan.txt wug3.txt
+> add nan.txt
+<<<
+> commit "hello"
+<<<
+> branch catherine
+<<<
+> reset 456789876
+No commit with that id exists.
+<<<

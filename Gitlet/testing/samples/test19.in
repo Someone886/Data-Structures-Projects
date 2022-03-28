@@ -1,0 +1,18 @@
+I setup2.inc
++ benny.txt wug.txt
+> add benny.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+benny.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<

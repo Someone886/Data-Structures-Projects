@@ -1,0 +1,9 @@
+I setup2.inc
+I blank-status.inc
+> rm f.txt
+<<<
+> rm g.txt
+<<<
+> commit "Removed f.txt g.txt"
+<<<
+I blank-status.inc
