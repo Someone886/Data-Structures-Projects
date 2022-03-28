@@ -1,0 +1,17 @@
+# Check that some simple moves entered by hand work.  The AI is never started.
+#* java -ea loa.Main
+manual White
+new
+dump
+b1-d3
+dump
+a3-d3
+dump
+c1-c3
+dump
+a2-c2
+dump
+e1-b4
+dump
+h2-f2
+dump

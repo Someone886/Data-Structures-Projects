@@ -1,0 +1,12 @@
+# Check simple moves
+#* java -ea loa.Main
+manual white
+new
+dump
+d1-d3
+dump
+a2-c2
+dump
+b1-b3
+dump
+quit

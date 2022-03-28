@@ -1,0 +1,4 @@
+# Test Seed
+#* java -ea loa.Main
+seed 22345678
+auto Black
